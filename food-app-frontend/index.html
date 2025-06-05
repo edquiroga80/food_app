@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Comida IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>📷 Analiza tu Plato</h1>
+    </header>
+    <main>
+        <div class="upload-section">
+            <input type="file" id="foodImageInput" accept="image/*">
+            <label for="foodImageInput" class="upload-button">Seleccionar Foto</label>
+            <img id="imagePreview" src="#" alt="Vista previa de la imagen" style="display:none;">
+            <button id="analyzeButton" disabled>Analizar Comida</button>
+        </div>
+        <div id="loadingIndicator" style="display:none;">
+            <p>Analizando...</p>
+            <div class="spinner"></div>
+        </div>
+        <div id="resultsSection" style="display:none;">
+            <h2>Resultados del Análisis</h2>
+            <div id="foodDescription"></div>
+            <h3>Nutrición Estimada:</h3>
+            <p><strong>Calorías:</strong> <span id="calories">---</span> kcal</p>
+            <p><strong>Proteínas:</strong> <span id="protein">---</span> g</p>
+            <p><strong>Grasas:</strong> <span id="fat">---</span> g</p>
+            <pre id="rawResponse"></pre>
+        </div>
+    </main>
+    <footer>
+        <p>Desarrollado GIS Dev & IA Gemini</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
