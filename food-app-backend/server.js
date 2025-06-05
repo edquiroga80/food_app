@@ -1,12 +1,11 @@
-const cors = require("cors");
-app.use(cors());
-
 require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
 const multer = require("multer");
 
 const app = express();
+const cors = require("cors");
+app.use(cors());
 const port = process.env.PORT || 3000;
 
 const storage = multer.memoryStorage();
