@@ -64,11 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
     formData.append("foodImage", selectedFile);
 
     try {
-      const response = await fetch("/analyze-food", {
-        method: "POST",
-        body: formData,
-        // No necesitas 'Content-Type' aquí, FormData lo establece automáticamente
-      });
+      const response = await fetch(
+        "https://food-app-a676.onrender.com/analyze-food",
+        {
+          method: "POST",
+          body: formData,
+          // No necesitas 'Content-Type' aquí, FormData lo establece automáticamente
+        }
+      );
 
       // Intentamos parsear como JSON independientemente del status,
       // ya que el backend podría enviar un JSON con un mensaje de error.

@@ -14,7 +14,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 app.use(express.json()); // Para parsear JSON del body de solicitudes (no tan relevante para FormData pero buena práctica)
-app.use(express.static("../food-app-frontend")); // Sirve los archivos estáticos del frontend (ajusta la ruta si es necesario)
+//app.use(express.static("../food-app-frontend")); // Sirve los archivos estáticos del frontend (ajusta la ruta si es necesario)
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 // URL actualizada para un modelo de Gemini más reciente y compatible con visión
